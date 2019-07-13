@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Exercise 2</title>
+	<title>Kalkulator</title>
+	<style>
+		container {
+			padding: 40px;
+			width: 300px;
+			margin:auto;
+			background-color: orange;
+			box-sizing: border-box;
+
+		}
+body{
+		background: #FF6660;
+	}
+
+	div{
+	width: 200px;
+	margin:auto;
+	background-color: orange;
+
+}
+
+button:hover{
+	background: grey;
+	color:#fff;
+}
+	</style>
+<script>
+
+	function tambah(val1,val2) {
+	var hasil;
+	hasil = parseInt(val1) + parseInt(val2);
+document.getElementById("hasil").innerHTML= hasil; 
+}
+
+function kurang(val1,val2) {
+	var hasil;
+	hasil = parseInt(val1) - parseInt(val2);
+document.getElementById("hasil").innerHTML= hasil; 
+}
+
+function kali(val1,val2) {
+	var hasil;
+	hasil = parseInt(val1) * parseInt(val2);
+document.getElementById("hasil").innerHTML= hasil; 
+}
+
+function bagi(val1,val2) {
+	var hasil;
+	hasil = parseInt(val1) / parseInt(val2);
+document.getElementById("hasil").innerHTML= hasil; 
+}
+
+</script>
 </head>
 <body>
-    <center>
-        <h1>Kalkulator</h1>
-    </center>
+	
+<div class="container">
+	kalkulator
+	<div>
+
+	<input type="text" id="bilangan1"/>
+	 <input type="text" id="bilangan2"/>
+	 <h2 id="hasil">0</h2>
+	 <button onclick= tambah(bilangan1.value,bilangan2.value)>
+	 	+
+	 </button>
+
+	<button onclick= kurang(bilangan1.value,bilangan2.value)>
+	 	-
+	 </button>
+
+	 <button onclick= kali(bilangan1.value,bilangan2.value)>
+	 	*
+	 </button>
+
+	 <button onclick= bagi(bilangan1.value,bilangan2.value)>
+	 	/
+	 </button>
+</div>
+
+
+</div>
+
 </body>
 </html>
